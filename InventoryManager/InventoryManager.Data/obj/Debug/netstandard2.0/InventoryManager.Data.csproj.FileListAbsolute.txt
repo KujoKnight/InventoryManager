@@ -1,0 +1,8 @@
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.deps.json
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.dll
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.pdb
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csproj.CoreCompileInputs.cache
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.AssemblyInfoInputs.cache
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.AssemblyInfo.cs
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.dll
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.pdb
