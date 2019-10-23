@@ -4,7 +4,7 @@ using InventoryManager.Data;
 using InventoryManager.WinForms.ViewModels;
 using Newtonsoft.Json;
 
-namespace InventoryManager.WinForms
+namespace InventoryManager.WinForms.Forms
 {
     public partial class MainForm : Form
     {
@@ -37,5 +37,22 @@ namespace InventoryManager.WinForms
         }
 
         private WorldViewModel mViewModel;
+
+        private void AddPlayersButton_Click(object sender, System.EventArgs e)
+        {
+            using (AddPlayerForm addPlayerForm = new AddPlayerForm())
+            {
+                if (addPlayerForm.ShowDialog() == DialogResult.OK)
+                {
+                    Player player = new Player { Name = addPlayerForm.PlayerName };
+                    playerListBox.Items.Add(player);
+                }
+            }
+        }
+
+        private void RemovePlayersButton_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace InventoryManager.WinForms
+﻿namespace InventoryManager.WinForms.Forms
 {
     partial class MainForm
     {
@@ -201,6 +201,7 @@
             this.removePlayersButton.TabIndex = 2;
             this.removePlayersButton.Text = "&Delete";
             this.removePlayersButton.UseVisualStyleBackColor = true;
+            this.removePlayersButton.Click += new System.EventHandler(this.RemovePlayersButton_Click);
             // 
             // addPlayersButton
             // 
@@ -211,6 +212,7 @@
             this.addPlayersButton.TabIndex = 1;
             this.addPlayersButton.Text = "&Add...";
             this.addPlayersButton.UseVisualStyleBackColor = true;
+            this.addPlayersButton.Click += new System.EventHandler(this.AddPlayersButton_Click);
             // 
             // playerListBox
             // 
