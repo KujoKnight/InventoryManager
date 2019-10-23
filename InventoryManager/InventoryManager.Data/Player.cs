@@ -1,10 +1,11 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Collections.Generic;
 
 namespace InventoryManager.Data
 {
-    public class Player
+    public class Player : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public string Name { get; set; }
         public int Health { get; set; }
         public int Score { get; set; }

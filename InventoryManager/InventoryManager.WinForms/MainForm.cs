@@ -6,15 +6,22 @@ using Newtonsoft.Json;
 
 namespace InventoryManager.WinForms
 {
-    public partial class InventoryManager : Form
+    public partial class MainForm : Form
     {
         private WorldViewModel ViewModel
         {
             get => mViewModel;
-            set => mViewModel = value;
+            set 
+            { 
+                if(mViewModel != value)
+                {
+                    mViewModel = value;
+                    worldViewModelBindingSource.DataSource = mViewModel;
+                }
+            }
         }
 
-        public InventoryManager()
+        public MainForm()
         {
             InitializeComponent();
             ViewModel = new WorldViewModel();
@@ -26,7 +33,6 @@ namespace InventoryManager.WinForms
             {
                 ViewModel.World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
                 ViewModel.Filename = openFileDialog.FileName;
-                //filenameTextBox.Text = openFileDialog.FileName;
             }
         }
 

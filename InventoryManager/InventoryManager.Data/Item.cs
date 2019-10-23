@@ -1,11 +1,13 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Collections.Generic;
 using System.Text;
 
 namespace InventoryManager.Data
 {
-    public class Item
+    public class Item : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public string Name { get; set; }
+
     }
 }
