@@ -15,3 +15,5 @@ D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\ne
 D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.pdb
 D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csproj.Fody.CopyLocal.cache
 D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csprojAssemblyReference.cache
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csprojAssemblyReference.cache
+C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csproj.Fody.CopyLocal.cache

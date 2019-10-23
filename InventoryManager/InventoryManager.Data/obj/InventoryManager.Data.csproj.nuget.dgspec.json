@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj": {}
+    "C:\\Users\\jo793328\\Documents\\GitHub\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj": {}
   },
   "projects": {
-    "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj": {
+    "C:\\Users\\jo793328\\Documents\\GitHub\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jo793328\\Documents\\GitHub\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
         "projectName": "InventoryManager.Data",
-        "projectPath": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
-        "packagesPath": "C:\\Users\\kujok\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\obj\\",
+        "projectPath": "C:\\Users\\jo793328\\Documents\\GitHub\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
+        "packagesPath": "C:\\Users\\jo793328\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jo793328\\Documents\\GitHub\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kujok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\jo793328\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -59,16 +61,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
