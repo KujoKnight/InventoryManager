@@ -92,6 +92,18 @@ namespace InventoryManager.WinForms.Forms
                 itemListbox.SelectedItem = ViewModel.Items.FirstOrDefault();
             }
         }
+        private void playerInvAddButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void playerInventoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            playerInvRemoveButton.Enabled = playerInventoryListBox.SelectedItem != null;
+        }
+
+        private void playerInvRemoveButton_Click(object sender, EventArgs e)
+        {
+        }
 
         #region MainMenu
         private void openWorldToolStripMenuItem_Click(object sender, System.EventArgs e)
