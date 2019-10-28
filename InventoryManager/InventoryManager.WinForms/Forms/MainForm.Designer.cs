@@ -29,16 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.FileLabel = new System.Windows.Forms.Label();
-            this.filenameTextBox = new System.Windows.Forms.TextBox();
             this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.FileSearch = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.playersTabPage = new System.Windows.Forms.TabPage();
             this.playerScoreTextBox = new System.Windows.Forms.TextBox();
             this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.worldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerScoreLabel = new System.Windows.Forms.Label();
             this.playerHealthTextBox = new System.Windows.Forms.TextBox();
             this.playerHealthLabel = new System.Windows.Forms.Label();
@@ -53,48 +49,29 @@
             this.itemValueLabel = new System.Windows.Forms.Label();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.itemNameLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.removeItemButton = new System.Windows.Forms.Button();
+            this.addItemButton = new System.Windows.Forms.Button();
             this.itemListbox = new System.Windows.Forms.ListBox();
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playersTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).BeginInit();
             this.itemsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // FileLabel
-            // 
-            this.FileLabel.AutoSize = true;
-            this.FileLabel.Location = new System.Drawing.Point(12, 15);
-            this.FileLabel.Name = "FileLabel";
-            this.FileLabel.Size = new System.Drawing.Size(26, 13);
-            this.FileLabel.TabIndex = 0;
-            this.FileLabel.Text = "File:";
-            // 
-            // filenameTextBox
-            // 
-            this.filenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.worldViewModelBindingSource, "Filename", true));
-            this.filenameTextBox.Location = new System.Drawing.Point(44, 11);
-            this.filenameTextBox.Name = "filenameTextBox";
-            this.filenameTextBox.Size = new System.Drawing.Size(512, 20);
-            this.filenameTextBox.TabIndex = 1;
             // 
             // worldViewModelBindingSource
             // 
             this.worldViewModelBindingSource.DataSource = typeof(InventoryManager.WinForms.ViewModels.WorldViewModel);
-            // 
-            // FileSearch
-            // 
-            this.FileSearch.Location = new System.Drawing.Point(562, 9);
-            this.FileSearch.Name = "FileSearch";
-            this.FileSearch.Size = new System.Drawing.Size(50, 25);
-            this.FileSearch.TabIndex = 2;
-            this.FileSearch.Text = "...";
-            this.FileSearch.UseVisualStyleBackColor = true;
-            this.FileSearch.Click += new System.EventHandler(this.FileSearch_Click);
             // 
             // openFileDialog
             // 
@@ -104,11 +81,11 @@
             // 
             this.mainTabControl.Controls.Add(this.playersTabPage);
             this.mainTabControl.Controls.Add(this.itemsTabPage);
-            this.mainTabControl.Location = new System.Drawing.Point(14, 35);
+            this.mainTabControl.Location = new System.Drawing.Point(14, 26);
             this.mainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(598, 557);
+            this.mainTabControl.Size = new System.Drawing.Size(598, 566);
             this.mainTabControl.TabIndex = 3;
             // 
             // playersTabPage
@@ -126,14 +103,14 @@
             this.playersTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.playersTabPage.Name = "playersTabPage";
             this.playersTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.playersTabPage.Size = new System.Drawing.Size(590, 531);
+            this.playersTabPage.Size = new System.Drawing.Size(590, 540);
             this.playersTabPage.TabIndex = 0;
             this.playersTabPage.Text = "Players";
             this.playersTabPage.UseVisualStyleBackColor = true;
             // 
             // playerScoreTextBox
             // 
-            this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Score", true));
+            this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Score", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerScoreTextBox.Location = new System.Drawing.Point(130, 120);
             this.playerScoreTextBox.Name = "playerScoreTextBox";
             this.playerScoreTextBox.Size = new System.Drawing.Size(70, 20);
@@ -142,12 +119,7 @@
             // playersBindingSource
             // 
             this.playersBindingSource.DataMember = "Players";
-            this.playersBindingSource.DataSource = this.worldBindingSource;
-            // 
-            // worldBindingSource
-            // 
-            this.worldBindingSource.DataMember = "World";
-            this.worldBindingSource.DataSource = this.worldViewModelBindingSource;
+            this.playersBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // playerScoreLabel
             // 
@@ -160,7 +132,7 @@
             // 
             // playerHealthTextBox
             // 
-            this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Health", true));
+            this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerHealthTextBox.Location = new System.Drawing.Point(130, 71);
             this.playerHealthTextBox.Name = "playerHealthTextBox";
             this.playerHealthTextBox.Size = new System.Drawing.Size(70, 20);
@@ -177,7 +149,7 @@
             // 
             // playerNameTextBox
             // 
-            this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true));
+            this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerNameTextBox.Location = new System.Drawing.Point(130, 22);
             this.playerNameTextBox.Name = "playerNameTextBox";
             this.playerNameTextBox.Size = new System.Drawing.Size(216, 20);
@@ -224,7 +196,8 @@
             this.playerListBox.Name = "playerListBox";
             this.playerListBox.Size = new System.Drawing.Size(118, 485);
             this.playerListBox.TabIndex = 0;
-            this.playerListBox.ValueMember = "Health";
+            this.playerListBox.ValueMember = "Name";
+            this.playerListBox.SelectedIndexChanged += new System.EventHandler(this.playerListBox_SelectedIndexChanged);
             // 
             // itemsTabPage
             // 
@@ -232,21 +205,21 @@
             this.itemsTabPage.Controls.Add(this.itemValueLabel);
             this.itemsTabPage.Controls.Add(this.itemNameTextBox);
             this.itemsTabPage.Controls.Add(this.itemNameLabel);
-            this.itemsTabPage.Controls.Add(this.button1);
-            this.itemsTabPage.Controls.Add(this.button2);
+            this.itemsTabPage.Controls.Add(this.removeItemButton);
+            this.itemsTabPage.Controls.Add(this.addItemButton);
             this.itemsTabPage.Controls.Add(this.itemListbox);
             this.itemsTabPage.Location = new System.Drawing.Point(4, 22);
             this.itemsTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.itemsTabPage.Name = "itemsTabPage";
             this.itemsTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.itemsTabPage.Size = new System.Drawing.Size(590, 531);
+            this.itemsTabPage.Size = new System.Drawing.Size(590, 540);
             this.itemsTabPage.TabIndex = 1;
             this.itemsTabPage.Text = "Items";
             this.itemsTabPage.UseVisualStyleBackColor = true;
             // 
             // itemValueTextBox
             // 
-            this.itemValueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Value", true));
+            this.itemValueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Value", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.itemValueTextBox.Location = new System.Drawing.Point(131, 72);
             this.itemValueTextBox.Name = "itemValueTextBox";
             this.itemValueTextBox.Size = new System.Drawing.Size(407, 20);
@@ -255,7 +228,7 @@
             // itemsBindingSource
             // 
             this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.worldBindingSource;
+            this.itemsBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // itemValueLabel
             // 
@@ -268,7 +241,7 @@
             // 
             // itemNameTextBox
             // 
-            this.itemNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Name", true));
+            this.itemNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.itemNameTextBox.Location = new System.Drawing.Point(131, 23);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(407, 20);
@@ -283,25 +256,27 @@
             this.itemNameLabel.TabIndex = 6;
             this.itemNameLabel.Text = "Item Name:";
             // 
-            // button1
+            // removeItemButton
             // 
-            this.button1.Location = new System.Drawing.Point(65, 501);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "&Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.removeItemButton.Location = new System.Drawing.Point(65, 501);
+            this.removeItemButton.Margin = new System.Windows.Forms.Padding(2);
+            this.removeItemButton.Name = "removeItemButton";
+            this.removeItemButton.Size = new System.Drawing.Size(56, 19);
+            this.removeItemButton.TabIndex = 5;
+            this.removeItemButton.Text = "&Delete";
+            this.removeItemButton.UseVisualStyleBackColor = true;
+            this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
             // 
-            // button2
+            // addItemButton
             // 
-            this.button2.Location = new System.Drawing.Point(4, 501);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "&Add...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addItemButton.Location = new System.Drawing.Point(4, 501);
+            this.addItemButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addItemButton.Name = "addItemButton";
+            this.addItemButton.Size = new System.Drawing.Size(56, 19);
+            this.addItemButton.TabIndex = 4;
+            this.addItemButton.Text = "&Add...";
+            this.addItemButton.UseVisualStyleBackColor = true;
+            this.addItemButton.Click += new System.EventHandler(this.addItemButton_Click);
             // 
             // itemListbox
             // 
@@ -314,6 +289,72 @@
             this.itemListbox.Size = new System.Drawing.Size(118, 485);
             this.itemListbox.TabIndex = 3;
             this.itemListbox.ValueMember = "Name";
+            this.itemListbox.SelectedIndexChanged += new System.EventHandler(this.itemListbox_SelectedIndexChanged);
+            // 
+            // mainMenuStrip
+            // 
+            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuStrip.Name = "mainMenuStrip";
+            this.mainMenuStrip.Size = new System.Drawing.Size(624, 24);
+            this.mainMenuStrip.TabIndex = 4;
+            this.mainMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openWorldToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // openWorldToolStripMenuItem
+            // 
+            this.openWorldToolStripMenuItem.Name = "openWorldToolStripMenuItem";
+            this.openWorldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openWorldToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.openWorldToolStripMenuItem.Text = "&Open World...";
+            this.openWorldToolStripMenuItem.Click += new System.EventHandler(this.openWorldToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.saveAsToolStripMenuItem.Text = "Save &As...";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(192, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "World Files (*.json)|*.json";
+            this.saveFileDialog.Title = "Save World File";
             // 
             // MainForm
             // 
@@ -321,9 +362,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 601);
             this.Controls.Add(this.mainTabControl);
-            this.Controls.Add(this.FileSearch);
-            this.Controls.Add(this.filenameTextBox);
-            this.Controls.Add(this.FileLabel);
+            this.Controls.Add(this.mainMenuStrip);
+            this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Manager";
@@ -332,34 +372,27 @@
             this.playersTabPage.ResumeLayout(false);
             this.playersTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).EndInit();
             this.itemsTabPage.ResumeLayout(false);
             this.itemsTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            this.mainMenuStrip.ResumeLayout(false);
+            this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label FileLabel;
-        private System.Windows.Forms.TextBox filenameTextBox;
-        private System.Windows.Forms.Button FileSearch;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.BindingSource worldViewModelBindingSource;
         private System.Windows.Forms.TabControl mainTabControl;
         private System.Windows.Forms.TabPage playersTabPage;
         private System.Windows.Forms.Button removePlayersButton;
         private System.Windows.Forms.Button addPlayersButton;
         private System.Windows.Forms.ListBox playerListBox;
         private System.Windows.Forms.TabPage itemsTabPage;
-        private System.Windows.Forms.BindingSource worldBindingSource;
-        private System.Windows.Forms.BindingSource playersBindingSource;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button removeItemButton;
+        private System.Windows.Forms.Button addItemButton;
         private System.Windows.Forms.ListBox itemListbox;
-        private System.Windows.Forms.BindingSource itemsBindingSource;
         private System.Windows.Forms.TextBox itemValueTextBox;
         private System.Windows.Forms.Label itemValueLabel;
         private System.Windows.Forms.TextBox itemNameTextBox;
@@ -370,6 +403,17 @@
         private System.Windows.Forms.Label playerNameLabel;
         private System.Windows.Forms.TextBox playerScoreTextBox;
         private System.Windows.Forms.Label playerScoreLabel;
+        private System.Windows.Forms.BindingSource worldViewModelBindingSource;
+        private System.Windows.Forms.BindingSource playersBindingSource;
+        private System.Windows.Forms.MenuStrip mainMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openWorldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.BindingSource itemsBindingSource;
     }
 }
 
