@@ -29,6 +29,5 @@ D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debu
 C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.csproj.Fody.CopyLocal.cache
 C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.AddPlayerForm.resources
 C:\Users\jo793328\Documents\GitHub\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.MainForm.resources
-D:\Repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.AddPlayerForm.resources
 D:\Repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.MainForm.resources
-D:\Repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.AddItemForm.resources
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.AddRoomForm.resources

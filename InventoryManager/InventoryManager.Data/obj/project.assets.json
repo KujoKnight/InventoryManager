@@ -299,11 +299,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
-      "projectName": "InventoryManager.Data",
-      "projectPath": "D:\\Repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\InventoryManager.Data.csproj",
+      "projectUniqueName": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\WorldBuilder.Data.csproj",
+      "projectName": "WorldBuilder.Data",
+      "projectPath": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\WorldBuilder.Data.csproj",
       "packagesPath": "C:\\Users\\kujok\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\obj\\",
+      "outputPath": "D:\\repos\\WinformsDataBinding\\InventoryManager\\InventoryManager.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

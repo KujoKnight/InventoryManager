@@ -1,0 +1,16 @@
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\InventoryManager.WinForms.exe.config
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\InventoryManager.WinForms.exe
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\InventoryManager.WinForms.pdb
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\Newtonsoft.Json.dll
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\WorldBuilder.Data.dll
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\WorldBuilder.Data.pdb
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\bin\Debug\Newtonsoft.Json.xml
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\WorldBuilder.WinForms.csprojAssemblyReference.cache
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.AddRoomForm.resources
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Forms.MainForm.resources
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.Properties.Resources.resources
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\WorldBuilder.WinForms.csproj.GenerateResource.cache
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\WorldBuilder.WinForms.csproj.Fody.CopyLocal.cache
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\WorldBuilder.WinForms.csproj.CopyComplete
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.exe
+D:\repos\WinformsDataBinding\InventoryManager\InventoryManager.WinForms\obj\Debug\InventoryManager.WinForms.pdb

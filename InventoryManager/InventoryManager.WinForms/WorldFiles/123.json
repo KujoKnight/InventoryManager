@@ -1,0 +1,19 @@
+{
+  "WelcomeMessage": "Hello there",
+  "Rooms": [
+    {
+      "Name": "123",
+      "Description": "123",
+      "StartingLocation": true,
+      "Neighbors": []
+    },
+    {
+      "Name": "456",
+      "Description": "456",
+      "StartingLocation": false,
+      "Neighbors": [
+        "123"
+      ]
+    }
+  ]
+}

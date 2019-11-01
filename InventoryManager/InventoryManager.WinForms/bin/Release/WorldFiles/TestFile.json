@@ -1,0 +1,21 @@
+{
+  "WelcomeMessage": "Hello there, General Kenobi...",
+  "Rooms": [
+    {
+      "Name": "Room A",
+      "Description": "This is a starting room!",
+      "StartingLocation": true,
+      "Neighbors": [
+        "Adjacent Room"
+      ]
+    },
+    {
+      "Name": "Adjacent Room",
+      "Description": "This is another room next to the starting location...",
+      "StartingLocation": false,
+      "Neighbors": [
+        "Room A"
+      ]
+    }
+  ]
+}

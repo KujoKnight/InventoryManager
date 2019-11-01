@@ -1,0 +1,13 @@
+{
+  "Message": {
+    "WelcomeMessage": null
+  },
+  "Rooms": [
+    {
+      "Name": "Test",
+      "Description": "Test",
+      "StartingLocation": false,
+      "Neighbors": []
+    }
+  ]
+}

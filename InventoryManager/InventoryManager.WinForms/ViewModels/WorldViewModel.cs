@@ -10,8 +10,8 @@ namespace InventoryManager.WinForms.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string Filename { get; set; }
-        public BindingList<Player> Players { get; set; }
-        public BindingList<Item> Items { get; set; }
+        public string Message { get; set; }
+        public BindingList<Room> Rooms { get; set; }
         public World World
         {
             set
@@ -19,15 +19,15 @@ namespace InventoryManager.WinForms.ViewModels
                 if (mWorld != value)
                 {
                     mWorld = value;
-                    if(mWorld != null)
+                    if (mWorld != null)
                     {
-                        Players = new BindingList<Player>(mWorld.Players);
-                        Items = new BindingList<Item>(mWorld.Items);
+                        Rooms = new BindingList<Room>(mWorld.Rooms);
+                        Message = new string(new char[] { });
                     }
                     else
                     {
-                        Players = new BindingList<Player>(Array.Empty<Player>());
-                        Items = new BindingList<Item>(Array.Empty<Item>());
+                        Rooms = new BindingList<Room>(Array.Empty<Room>());
+                        Message = new string(new char[] { });
                     }
                 }
             }
@@ -38,23 +38,55 @@ namespace InventoryManager.WinForms.ViewModels
             World = world;
         }
 
-        public void SaveWorld()
+        public void SaveWorld(bool newFile)
         {
-            if (string.IsNullOrEmpty(Filename))
+            mWorld.WelcomeMessage = Message;
+            bool startingLocSet = false;
+            foreach (Room room in mWorld.Rooms)
             {
-                throw new InvalidProgramException("Filename expected.");
+                if (room.StartingLocation == true)
+                {
+                    if(startingLocSet == false)
+                    {
+                        startingLocSet = true;
+                    }
+                    else
+                    {
+                        room.StartingLocation = false;
+                    }
+                }
+
             }
 
-            JsonSerializer serializer = new JsonSerializer
+            if (!newFile)
             {
-                Formatting = Formatting.Indented
-            };
-            using (StreamWriter streamWriter = new StreamWriter(Filename))
-            using (JsonWriter jsonWriter = new JsonTextWriter(streamWriter))
-            {
-                serializer.Serialize(jsonWriter, mWorld);
-            } 
+                if (string.IsNullOrEmpty(Filename))
+                {
+                    throw new InvalidProgramException("Filename expected.");
+                }
 
+                JsonSerializer serializer = new JsonSerializer
+                {
+                    Formatting = Formatting.Indented
+                };
+                using (StreamWriter streamWriter = new StreamWriter(Filename))
+                using (JsonWriter jsonWriter = new JsonTextWriter(streamWriter))
+                {
+                    serializer.Serialize(jsonWriter, mWorld);
+                }
+            }
+            else
+            {
+                JsonSerializer serializer = new JsonSerializer
+                {
+                    Formatting = Formatting.Indented
+                };
+                using (StreamWriter streamWriter = new StreamWriter(Filename))
+                using (JsonWriter jsonWriter = new JsonTextWriter(streamWriter))
+                {
+                    serializer.Serialize(jsonWriter, mWorld);
+                }
+            }
         }
 
         private World mWorld;

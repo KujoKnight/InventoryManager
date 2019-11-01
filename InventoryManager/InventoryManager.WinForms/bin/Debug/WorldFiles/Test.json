@@ -1,0 +1,18 @@
+{
+  "Rooms": [
+    {
+      "Name": "TestRoom",
+      "Description": "123",
+      "StartingLocation": true,
+      "Neighbors": []
+    },
+    {
+      "Name": "Nowhere",
+      "Description": "456",
+      "StartingLocation": false,
+      "Neighbors": [
+        "TestRoom"
+      ]
+    }
+  ]
+}
