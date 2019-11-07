@@ -37,6 +37,23 @@ namespace WinformTutorial
             }
         }
 
+        private void CheckForWinner()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                        return;
+                }
+            }
+
+            MessageBox.Show("You matched all the icons!", "Congratulations");
+            Close();
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -64,6 +81,8 @@ namespace WinformTutorial
 
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
+
+                CheckForWinner();
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
