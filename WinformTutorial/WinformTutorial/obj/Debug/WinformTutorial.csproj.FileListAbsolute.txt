@@ -1,0 +1,9 @@
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\bin\Debug\WinformTutorial.exe.config
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\bin\Debug\WinformTutorial.exe
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\bin\Debug\WinformTutorial.pdb
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.csprojAssemblyReference.cache
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.Form1.resources
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.Properties.Resources.resources
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.csproj.GenerateResource.cache
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.exe
+D:\Repos\WinformsDataBinding\WinformTutorial\WinformTutorial\obj\Debug\WinformTutorial.pdb
